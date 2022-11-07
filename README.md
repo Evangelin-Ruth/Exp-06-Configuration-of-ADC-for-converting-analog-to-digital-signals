@@ -210,12 +210,7 @@ int main()
 ## GRAPH:
 ![image](https://user-images.githubusercontent.com/94219798/200316668-4630dc36-9fd3-4b0d-b409-decf262eb92a.png)
 
-
-
- ![image](https://user-images.githubusercontent.com/36288975/198947184-dbccf4b1-10a1-4090-a670-93526ed6e597.png) 
-Figure -09 graph between % of pot(1Kohm) values and ADC 
-
-
+Figure -09 graph between % of pot(1Kohm) values and ADC
 
 
 ### Output:
