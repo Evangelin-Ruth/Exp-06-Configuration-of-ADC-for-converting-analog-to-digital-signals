@@ -213,7 +213,7 @@ int main()
 Figure -09 graph between % of pot(1Kohm) values and ADC
 
 
-### Output:
+## Output:
 ## Before Stimulation:
 ![WhatsApp Image 2022-11-07 at 10 51 38 AM (2)](https://user-images.githubusercontent.com/94219798/200317174-bcb83bb5-332f-4917-8747-f19dca7cf2a0.jpeg)
 
@@ -223,7 +223,7 @@ Figure -09 graph between % of pot(1Kohm) values and ADC
 ## Circuit Diagram:
 ![WhatsApp Image 2022-11-07 at 10 51 38 AM](https://user-images.githubusercontent.com/94219798/200317762-ee11e8bd-99e8-49a3-ad3e-b4b1073d0102.jpeg)
 
-Result :
+## Result :
 Configuring an ADC and the input values are displayed on LCD screen 
 
 
