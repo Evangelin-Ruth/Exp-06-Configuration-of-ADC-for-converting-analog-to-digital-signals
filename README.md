@@ -1,9 +1,9 @@
 # Exp-06-Configuration-of-ADC-for-converting-analog-to-digital-signals
 
 
-## Name :	
-## Roll no:
-## Date of experiment : 
+## Name :	Evangelin.S
+## Roll no: 21222123--25
+## Date of experiment : 06/11/2022
   
   
 ## Aim: To configure internal ADC for   LPC2148 ARM 7 and write a code for displaying the values varying from 0v to 3.3v to its equivalent digital values 
@@ -177,32 +177,61 @@ ADxDRy. E.g. AD0DR1 contains ADC result of channel 1 of ADC0.
 Figure -08 Circuit diagram of interfacing an POT with ADC input pin 
 
 ## Kiel - Program 
+```
+#include <lpc214x.h>
+#include "LCD.h"
+#include "ADC.h"
+
+unsigned int val;
+int main()
+{
+	IO1DIR = 0xffffffff;
+	IO0DIR = 0x00000000;
+	PINSEL0 = 0x300;
+	VPBDIV = 0x02;
+	lcd_init();
+	show(" ADC Value: ");
+	while(1)
+	{
+		cmd(0x8b);
+		val = adc(0,6);
+		dat((val/1000)+48);
+		dat(((val/100)%10)+48);
+		dat(((val/10)%10)+48);
+		dat((val%10)+48);
+	}
+}
+
+```
  
-## Tabulations and graph 
-SL NO	% OF POT VALUE	ADC VALUE
-1		
-2		
-3		
-4		
-5		
-6		
-7		
-8		
-9		
-10		
+## Tabulations 
+![image](https://user-images.githubusercontent.com/94219798/200316587-d7950f13-3942-433e-b6e1-ae99025a9697.png)
 
- ![image](https://user-images.githubusercontent.com/36288975/198947184-dbccf4b1-10a1-4090-a670-93526ed6e597.png)
+## GRAPH:
+![image](https://user-images.githubusercontent.com/94219798/200316668-4630dc36-9fd3-4b0d-b409-decf262eb92a.png)
 
 
 
- 
+ ![image](https://user-images.githubusercontent.com/36288975/198947184-dbccf4b1-10a1-4090-a670-93526ed6e597.png) 
 Figure -09 graph between % of pot(1Kohm) values and ADC 
 
+
+
+
+### Output:
+## Before Stimulation:
+![WhatsApp Image 2022-11-07 at 10 51 38 AM (2)](https://user-images.githubusercontent.com/94219798/200317174-bcb83bb5-332f-4917-8747-f19dca7cf2a0.jpeg)
+
+## After Stimulation:
+![WhatsApp Image 2022-11-07 at 10 51 38 AM (1)](https://user-images.githubusercontent.com/94219798/200317326-c335c01a-235c-4200-a467-78d49983bd7b.jpeg)
+
+## Circuit Diagram:
+![WhatsApp Image 2022-11-07 at 10 51 38 AM](https://user-images.githubusercontent.com/94219798/200317762-ee11e8bd-99e8-49a3-ad3e-b4b1073d0102.jpeg)
 
 Result :
 Configuring an ADC and the input values are displayed on LCD screen 
 
-Output screen shots :
+
 
 
 
